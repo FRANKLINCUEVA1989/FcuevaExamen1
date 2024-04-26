@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FcuevaExamen1.Vistas.Acerca"
+             Title="Acerca">
+    <VerticalStackLayout>
+        
+
+        <Label x:Name="lblUsuario1"
+                TextColor="Blue"
+               FontSize="24"
+               HorizontalTextAlignment="End" />
+
+        <Label 
+                Text=" DATOS DEL ESTUDIANTE:  "
+                FontSize="18"
+                 HorizontalTextAlignment="Center" />
+
+        <Label 
+        Text="NOMBRE: FRANKLIN EFREN CUEVA CUEVA "
+        FontSize="16"
+         HorizontalTextAlignment="Start" />
+
+        <Label 
+        Text="CURSO: 7mo SEMESTRE "
+        FontSize="16"
+         HorizontalTextAlignment="Start" />
+
+        <Label 
+            Text="CARRERA: INGENIERIA EN INFORMATICA "
+            FontSize="16"
+            HorizontalTextAlignment="Start" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

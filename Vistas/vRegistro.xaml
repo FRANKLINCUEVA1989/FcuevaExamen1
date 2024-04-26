@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FcuevaExamen1.Vistas.vRegistro"
+             Title="vRegistro">
+    <VerticalStackLayout>
+
+        <Label Text="REGISTRO"
+               TextColor="Blue"
+                FontSize="22"
+               HorizontalOptions="Center" />
+
+        <Label x:Name="lblUsuario2"
+                TextColor="red"
+                FontSize="16"
+                HorizontalTextAlignment="End" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>       
+
+       <Label Text="FECHA"
+               TextColor="Blue"
+               Grid.Row="0"
+               Grid.Column="0"
+               VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"/>
+            
+
+            <DatePicker x:Name="dpFecha" Date="04/09/2024"
+             Format="MM/dd/yyyy"
+             Grid.Row="0"
+             Grid.Column="1"/>
+            <Label x:Name="lblFecha"         
+                    FontSize="16"
+                    TextColor="Red"/>
+
+
+            <Label Text="SELECIONE UN PAIS"
+                    TextColor="Blue"
+                    FontSize="20"                   
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center" />
+
+            <Picker x:Name="pkPais" Title=" "
+                Grid.Row="1"
+                     Grid.Column="1">
+                <Picker.Items>
+                    <x:String>ECUADOR</x:String>
+                    <x:String>PERU</x:String>
+                    <x:String>COLOMBIA</x:String>
+                   
+                </Picker.Items>
+        </Picker>
+
+            <Label Text="SELECIONE UN PROVINCIA"
+                    TextColor="Blue"
+                    FontSize="20"                   
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center" />
+
+            <Picker x:Name="pkCiudades" Title=""
+                    Grid.Row="2"
+                    Grid.Column="1">
+            <Picker.Items>
+                <x:String>QUITO</x:String>
+                <x:String>GUAYAQUIL</x:String>
+                <x:String>LOJA</x:String>
+            </Picker.Items>
+        </Picker>
+
+            <Label Text="INGRESE EL MONTO INICIAL"
+                TextColor="Blue"
+                FontSize="20"                   
+                Grid.Row="3"
+                Grid.Column="0"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center" />
+
+            <Entry x:Name="txtMinicial"
+               Placeholder=" "
+                   Grid.Row="3"
+                    Grid.Column="1"
+                   />
+            <Label Text="INGRESE EL PAGO MENSUAL"
+                    TextColor="Blue"
+                    FontSize="20"                   
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center" />
+
+            <Entry x:Name="txtPmensual"
+                Placeholder=""
+               Grid.Row="4"
+                 Grid.Column="1"/>
+        </Grid>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="NOMBRE"
+                TextColor="Blue"
+                Grid.Row="0"
+                Grid.Column="0"
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start" />
+
+            <Entry x:Name="txtNombre"
+                Placeholder="Ingrese el nombre: "
+                Grid.Row="1"
+                Grid.Column="0"/>
+
+            <Label Text="APELLIDO"
+                TextColor="Blue"
+                Grid.Row="0"
+                Grid.Column="1"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center" />
+
+            <Entry x:Name="txtApllido"
+                Placeholder="Ingrese el apellido: "
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+            <Label Text="EDAD"
+                TextColor="Blue"
+                Grid.Row="0"
+                Grid.Column="2"
+                VerticalTextAlignment="End"
+                HorizontalTextAlignment="End" />
+
+            <Entry x:Name="txtEdad"
+                Placeholder="Ingrese la edad: "
+                Grid.Row="1"
+                Grid.Column="2"/>
+
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnFecha"
+                   Text="CALCULAR PAGO MENSUAL"
+                   Clicked="btnFecha_Clicked"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+
+            <Button x:Name="btnPais"
+                  Text="VER RESUMEN"
+                  Clicked="btnPais_Clicked"
+                  Grid.Row="0"
+                  Grid.Column="1"/>
+
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FcuevaExamen1.Vistas.Resumen"
+             Title="Resumen">
+    <VerticalStackLayout>
+        <Label Text="RESUMEN"
+       TextColor="Blue"
+        FontSize="22"
+       HorizontalOptions="Center" />
+
+        <Label x:Name="lblUsuario2"
+        TextColor="red"
+        FontSize="16"
+        HorizontalTextAlignment="End" />
+
+
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="NOMBRE"
+     TextColor="Blue"
+     Grid.Row="0"
+     Grid.Column="0"
+     VerticalTextAlignment="Start"
+     HorizontalTextAlignment="Start" />
+
+            <Entry x:Name="txtNombre"
+     Placeholder="nombre: "
+     Grid.Row="0"
+     Grid.Column="1"/>
+
+
+     <Label Text="APELLIDO"
+            TextColor="Blue"
+            Grid.Row="1"
+            Grid.Column="0"
+            VerticalTextAlignment="Start"
+            HorizontalTextAlignment="Start" />
+
+     <Entry x:Name="txtApellido"
+            Placeholder="nombre: "
+            Grid.Row="1"
+            Grid.Column="1"/>
+
+
+            <Label Text="EDAD"
+            TextColor="Blue"
+            Grid.Row="2"
+            Grid.Column="0"
+            VerticalTextAlignment="Start"
+            HorizontalTextAlignment="Start" />
+
+            <Entry x:Name="txtEdad"
+            Placeholder="edad: "
+            Grid.Row="2"
+            Grid.Column="1"/>
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+
+        <Button x:Name="btnResumen"
+                    Text="resumendd"
+                    Clicked="btnResumen_Clicked"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
